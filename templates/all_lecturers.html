@@ -1,0 +1,4 @@
+<h1>Wykaz Nauczycieli</h1>
+{% for nauczyciel in nauczyciele %}
+<h2> {{ forloop.counter}}: {{ nauczyciel.surname }} {{ nauczyciel.name }}</h2>
+{%endfor%}

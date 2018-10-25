@@ -25,6 +25,7 @@ urlpatterns = [
     path('hello2/', hello_view.hello2),
     path('hello_template/', hello_view.hello_template),
     path('zapisy/', include('zapisy.urls')),
-    path('wykazprzedmiotow/', views.show_courses)
+    path('wykazprzedmiotow/', views.show_courses),
+    path('wykaznauczycieli/', views.show_lecturers),
 ]
 
