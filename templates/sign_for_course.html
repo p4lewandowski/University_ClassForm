@@ -1,0 +1,17 @@
+<h2>Zapisy na zajęcia</h2>
+{% if error %}
+<p style="color: red;">Proszę uzupełnić wszystkie pola</p>
+{% endif %}
+{% if no_course %}
+<p style="color: red;">Nie ma takiego przedmiotu</p>
+{% endif %}
+<form action="status" method="GET">
+<p>Nazwa przedmiotu</p>
+<input type="text" name="nazwa_przedmiotu">
+<p>Imie studenta</p>
+<input type="text" name="imie">
+<p>Nazwisko studenta</p>
+<input type="text" name="nazwisko">
+    <p></p>
+<button name="sign" id="signbtn">Zapis</button>
+</form>

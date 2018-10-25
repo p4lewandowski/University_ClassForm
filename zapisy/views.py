@@ -1,21 +1,27 @@
 from django.shortcuts import render_to_response
-from zapisy.models import Przedmiot,  Nauczyciel
+from zapisy.models import Przedmiot,  Nauczyciel, Student
 import operator
 
 # Create your views here.
 
-def search_form(request):
-  return render_to_response('search_form.html')
+def sign_for_course(request):
+  return render_to_response('sign_for_course.html')
 
-def search(request):
-  if 'nazwa_przedmiotu' in request.GET and request.GET['nazwa_przedmiotu']:
-    query = request.GET['nazwa_przedmiotu']
-    przedmioty = Przedmiot.objects.filter(name__icontains=query)
-    return render_to_response('results_form.html',
-      {'przedmioty': przedmioty, 'query': query})
-  else:
-    return render_to_response('search_form.html',
-      {'error': True})
+def signing_process(request):
+    if request.GET['nazwa_przedmiotu'] and request.GET['imie'] and request.GET['nazwisko']:
+        if Przedmiot.objects.filter(name__exact=request.GET['nazwa_przedmiotu']):
+            course = Przedmiot.objects.filter(name__exact=request.GET['nazwa_przedmiotu'])
+            student = Student.objects.filter(name__exact=request.GET['imie'], surname__exact=request.GET['nazwisko'])
+            if student:
+                Przedmiot.students.add(student)
+            else:
+                
+        else:
+            return render_to_response('sign_for_course.html',
+                                      {'no_course': True})
+    else:
+        return render_to_response('sign_for_course.html',
+                                  {'error': True})
 
 def show_courses(request):
   przedmioty = Przedmiot.objects.all()
