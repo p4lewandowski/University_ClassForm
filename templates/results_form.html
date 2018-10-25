@@ -1,0 +1,7 @@
+<h1>Znalezione Przedmioty</h1>
+{% for przedmiot in przedmioty %}
+<p> {{ forloop.counter}}:      {{ przedmiot.name }} </p>
+{%endfor%}
+<form action='../szukaj' method='GET'>
+<button name="turn-back" id="backbtn">powrót</button>
+</form>

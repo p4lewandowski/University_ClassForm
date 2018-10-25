@@ -1,0 +1,8 @@
+<h1>Wykaz Przedmiotow</h1>
+{% for przedmiot in przedmioty %}
+<h2> {{ forloop.counter}}:      {{ przedmiot.name }} </h2>
+    <h4>{{ przedmiot.lecturer }} </h4>
+    {% for student in przedmiot.students.all %}
+        <p>{{ forloop.counter }}: {{ student.name }} {{ student.surname }}</p>
+    {%endfor%}
+{%endfor%}

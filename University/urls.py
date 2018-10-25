@@ -16,12 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from University import hello_view
-
+from django.conf.urls import include
+from zapisy import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('hello/', hello_view.hello),
     path('hello2/', hello_view.hello2),
     path('hello_template/', hello_view.hello_template),
+    path('zapisy/', include('zapisy.urls')),
+    path('wykazprzedmiotow/', views.show_courses)
 ]
 
