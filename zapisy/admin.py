@@ -8,3 +8,4 @@ from zapisy import views
 admin.site.register(Student)
 admin.site.register(Nauczyciel)
 admin.site.register(Przedmiot)
+

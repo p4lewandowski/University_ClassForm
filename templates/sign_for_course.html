@@ -5,6 +5,13 @@
 {% if no_course %}
 <p style="color: red;">Nie ma takiego przedmiotu</p>
 {% endif %}
+{% if signed %}
+<p style="color: green;">Student został zapisany na zajęcia</p>
+{% endif %}
+{% if existed %}
+<p style="color: yellow;">Student był już przypisany do przedmiotu</p>
+{% endif %}
+
 <form action="status" method="GET">
 <p>Nazwa przedmiotu</p>
 <input type="text" name="nazwa_przedmiotu">

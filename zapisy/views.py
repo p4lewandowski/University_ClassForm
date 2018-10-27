@@ -10,12 +10,15 @@ def sign_for_course(request):
 def signing_process(request):
     if request.GET['nazwa_przedmiotu'] and request.GET['imie'] and request.GET['nazwisko']:
         if Przedmiot.objects.filter(name__exact=request.GET['nazwa_przedmiotu']):
-            course = Przedmiot.objects.filter(name__exact=request.GET['nazwa_przedmiotu'])
-            student = Student.objects.filter(name__exact=request.GET['imie'], surname__exact=request.GET['nazwisko'])
-            if student:
-                Przedmiot.students.add(student)
-            else:
-                
+            course = Przedmiot.objects.get(name=request.GET['nazwa_przedmiotu'])
+            temp, created = course.students.get_or_create(name=request.GET['imie'], surname=request.GET['nazwisko'])
+
+            if not created:
+                return render_to_response('sign_for_course.html',
+                                          {'existed': True})
+
+            return render_to_response('sign_for_course.html',
+                                      {'signed': True})
         else:
             return render_to_response('sign_for_course.html',
                                       {'no_course': True})
