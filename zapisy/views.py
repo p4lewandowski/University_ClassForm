@@ -1,30 +1,47 @@
-from django.shortcuts import render_to_response
+from django.shortcuts import render_to_response, render
 from zapisy.models import Przedmiot,  Nauczyciel, Student
+from .forms.signing import SigningForm
 import operator
 
 # Create your views here.
 
-def sign_for_course(request):
-  return render_to_response('sign_for_course.html')
 
 def signing_process(request):
-    if request.GET['nazwa_przedmiotu'] and request.GET['imie'] and request.GET['nazwisko']:
-        if Przedmiot.objects.filter(name__exact=request.GET['nazwa_przedmiotu']):
-            course = Przedmiot.objects.get(name=request.GET['nazwa_przedmiotu'])
-            temp, created = course.students.get_or_create(name=request.GET['imie'], surname=request.GET['nazwisko'])
+    przedmioty = Przedmiot.objects.all()
+    form = SigningForm()
 
-            if not created:
-                return render_to_response('sign_for_course.html',
-                                          {'existed': True})
+    if request.method == "POST":
 
-            return render_to_response('sign_for_course.html',
-                                      {'signed': True})
+        form = SigningForm(request.POST)
+        if form.is_valid():
+
+            course_name = form.data['subject']
+            if Przedmiot.objects.filter(name__exact=course_name):
+
+                course = Przedmiot.objects.get(name=course_name)
+                temp, created = course.students.get_or_create(name=form.data['student_name'],
+                                                              surname=form.data['student_surname'])
+
+                if not created:
+                    return render(request, 'sign_with_list.html',
+                                              {'form': form, 'przedmioty': przedmioty, 'existed': True})
+
+                return render(request,'sign_with_list.html',
+                                          {'form': form,'przedmioty': przedmioty,  'signed': True})
+            else:
+                return render(request,'sign_with_list.html',
+                                          {'form': form,'przedmioty': przedmioty,  'no_course': True})
         else:
-            return render_to_response('sign_for_course.html',
-                                      {'no_course': True})
-    else:
-        return render_to_response('sign_for_course.html',
-                                  {'error': True})
+             return render(request,'sign_with_list.html',
+                                      {'form': form,'przedmioty': przedmioty,  'error': True})
+
+
+    return render(request, 'sign_with_list.html', {'przedmioty': przedmioty, 'form': form})
+
+
+
+def sign_for_course(request):
+  return render_to_response('sign_for_course.html')
 
 def show_courses(request):
   przedmioty = Przedmiot.objects.all()
