@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+    <ol>
+<h3>&nbspWykaz Przedmiotow</h3><br>
+{% for course in courses %}
+<h4>{{ forloop.counter}}:      {{ course.name }} </h4>
+    <h5>&nbsp&nbsp&nbsp&nbsp{{ course.lecturer }} </h5>
+    {% for student in course.students.all %}
+        <p> &nbsp&nbsp&nbsp&nbsp{{ forloop.counter }}: {{ student.name }} {{ student.surname }}</p>
+    {%endfor%}
+    <br>
+{%endfor%}
+</ol>
+{% endblock %}

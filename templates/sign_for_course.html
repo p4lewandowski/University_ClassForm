@@ -1,24 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+<ol>
 <h2>Zapisy na zajęcia</h2>
-{% if error %}
-<p style="color: red;">Proszę uzupełnić wszystkie pola</p>
-{% endif %}
-{% if no_course %}
-<p style="color: red;">Nie ma takiego przedmiotu</p>
-{% endif %}
+<h3>{{ name }}</h3>
 {% if signed %}
 <p style="color: green;">Student został zapisany na zajęcia</p>
 {% endif %}
 {% if existed %}
-<p style="color: saddlebrown;">Student był już przypisany do przedmiotu</p>
+<p style="color: saddlebrown;">Student jest już przypisany do przedmiotu</p>
 {% endif %}
 
-<form action="status" method="GET">
-<p>Nazwa przedmiotu</p>
-<input type="text" name="nazwa_przedmiotu">
-<p>Imie studenta</p>
-<input type="text" name="imie">
-<p>Nazwisko studenta</p>
-<input type="text" name="nazwisko">
-    <p></p>
-<button name="sign" id="signbtn">Zapis</button>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+<button type="submit">Zapisz się</button>
 </form>
+
+</body>
+</html>
+</ol>
+{% endblock %}

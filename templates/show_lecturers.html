@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<ol>
+<h3>Wykładowcy</h3>
+{% for lecturer in lecturers %}
+<h5>{{ forloop.counter}}: {{ lecturer.surname }} {{ lecturer.name }}</h5>
+{%endfor%}
+</ol>
+{% endblock %}
