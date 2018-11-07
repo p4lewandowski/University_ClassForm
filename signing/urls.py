@@ -8,5 +8,8 @@ urlpatterns = [
     path('lecturers/', views.show_lecturers, name='lecturers_list'),
     path('sign/', views.sign_for_courses, name='signing_list'),
     url(r'^sign/(?P<course_name>[\w-]+)/$', views.signing_process, name='course'),
-    path('nav/', TemplateView.as_view(template_name='base.html'))
+    path('nav/', TemplateView.as_view(template_name='base.html')),
+    path('dbexport/', views.export_data),
+    # path('dbimport/', views.import_data),
+    path('database/', views.database_management, name='database'),
 ]

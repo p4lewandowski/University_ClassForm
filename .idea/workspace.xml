@@ -2,40 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ec60720-b8ee-44cf-9282-483c824ddfe1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/University_ClassForms.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/University_Class.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/University_Class.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/University/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/University/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/University/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/University/wsgi.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signing/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/signing/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signing/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/signing/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/_nav_bar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/_nav_bar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/all_courses.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/all_lecturers.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/results_form.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/sign_for_course.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sign_for_course.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/sign_with_list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zapisy/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zapisy/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zapisy/forms/signing.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zapisy/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zapisy/migrations/0002_auto_20181025_1206.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zapisy/migrations/0003_auto_20181025_1318.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zapisy/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zapisy/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zapisy/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zapisy/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zapisy/views.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/University_ClassForms$import_export__1_.coverage" NAME="import_export (1) Coverage Results" MODIFIED="1541440787100" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/University_ClassForms$import_export.coverage" NAME="import_export Coverage Results" MODIFIED="1541440693688" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/signing" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
+    <select />
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
@@ -105,23 +107,86 @@
       <usages-collector id="statistics.vcs.git.usages" />
       <usages-collector id="statistics.js.language.service.starts" />
     </session>
+    <session id="381987696">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.js.language.service.starts" />
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="HTML" value="17" />
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Python" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages" />
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="HTML" value="67" />
+          <entry key="Python" value="645" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="db_backup" value="1" />
+          <entry key="html" value="17" />
+          <entry key="py" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="Django Console" value="14" />
+          <entry key="html" value="67" />
+          <entry key="py" value="631" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/base.html">
+        <entry file="file://$PROJECT_DIR$/signing/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="56" lean-forward="true" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/import_export.html">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="13" lean-forward="true" selection-start-column="13" selection-end-column="13" />
+              <caret column="25" lean-forward="true" selection-start-column="25" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/sign_for_course.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="19" lean-forward="true" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/show_lecturers.html">
+        <entry file="file://$PROJECT_DIR$/signing/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+            <state>
+              <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+              <folding>
+                <element signature="e#0#55#0" expanded="true" />
+                <marker date="1541442181014" expanded="true" signature="2284:2338" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -140,6 +205,7 @@
     <findStrings>
       <find>boot</find>
       <find>demo</find>
+      <find>delete_all</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -151,16 +217,19 @@
         <option value="$PROJECT_DIR$/signing/models.py" />
         <option value="$PROJECT_DIR$/University_Class/settings.py" />
         <option value="$PROJECT_DIR$/signing/admin.py" />
-        <option value="$PROJECT_DIR$/University_Class/urls.py" />
-        <option value="$PROJECT_DIR$/signing/views.py" />
         <option value="$PROJECT_DIR$/templates/base.html" />
-        <option value="$PROJECT_DIR$/signing/urls.py" />
-        <option value="$PROJECT_DIR$/templates/_nav_bar.html" />
         <option value="$PROJECT_DIR$/signing/forms/signing_form.py" />
         <option value="$PROJECT_DIR$/templates/sign_for_courses.html" />
         <option value="$PROJECT_DIR$/templates/sign_for_course.html" />
         <option value="$PROJECT_DIR$/templates/show_courses.html" />
         <option value="$PROJECT_DIR$/templates/show_lecturers.html" />
+        <option value="$PROJECT_DIR$/University_Class/urls.py" />
+        <option value="$PROJECT_DIR$/signing/import_export.py" />
+        <option value="$PROJECT_DIR$/import_export.py" />
+        <option value="$PROJECT_DIR$/templates/_nav_bar.html" />
+        <option value="$PROJECT_DIR$/templates/import_export.html" />
+        <option value="$PROJECT_DIR$/signing/urls.py" />
+        <option value="$PROJECT_DIR$/signing/views.py" />
       </list>
     </option>
   </component>
@@ -171,10 +240,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1924" />
-    <option name="y" value="235" />
-    <option name="width" value="1225" />
-    <option name="height" value="1087" />
+    <option name="x" value="54" />
+    <option name="y" value="-8" />
+    <option name="width" value="1320" />
+    <option name="height" value="784" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -191,7 +260,29 @@
             <path>
               <item name="University_ClassForms" type="b2602c69:ProjectViewProjectNode" />
               <item name="University_ClassForms" type="462c0819:PsiDirectoryNode" />
+              <item name="signing" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="University_ClassForms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="University_ClassForms" type="462c0819:PsiDirectoryNode" />
+              <item name="signing" type="462c0819:PsiDirectoryNode" />
+              <item name="forms" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="University_ClassForms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="University_ClassForms" type="462c0819:PsiDirectoryNode" />
+              <item name="signing" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="University_ClassForms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="University_ClassForms" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="University_ClassForms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="University_ClassForms" type="462c0819:PsiDirectoryNode" />
+              <item name="University_Class" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -209,10 +300,11 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Aniesia\Downloads\University_Class\templates" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Virnael\PycharmProjects\University_ClassForms" />
       <recent name="C:\Users\Aniesia\Downloads\University_Class\templates" />
     </key>
   </component>
@@ -228,7 +320,51 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.import_export (1)">
+    <configuration name="import_export (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="University_Class" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/import_export.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="import_export" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="University_Class" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/signing" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Virnael\PycharmProjects\University_ClassForms\import_export.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="University_ClassForms" type="Python.DjangoServer" factoryName="Django server">
       <module name="University_Class" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -237,7 +373,7 @@
         <env name="PYTHONUNBUFFERED" value="1" />
         <env name="DJANGO_SETTINGS_MODULE" value="University_Class.settings" />
       </envs>
-      <option name="SDK_HOME" value="E:\VEnvs\Django\Scripts\python.exe" />
+      <option name="SDK_HOME" value="C:\Users\Virnael\PycharmProjects\Django_Venv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -253,6 +389,17 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Django server.University_ClassForms" />
+      <item itemvalue="Python.import_export" />
+      <item itemvalue="Python.import_export (1)" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.import_export (1)" />
+        <item itemvalue="Python.import_export" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -267,32 +414,41 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="235" width="1376" height="754" extended-state="6" />
+    <frame x="54" y="-8" width="1320" height="784" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24164134" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15158731" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.20967741" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32923076" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.29076922" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39897698" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32985386" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32923076" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32992327" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.18670076" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.30307692" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.29692307" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
-      <window_info anchor="right" id="R Graphics" />
-      <window_info anchor="right" id="R Packages" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="Database" order="3" weight="0.2436508" />
       <window_info anchor="right" id="SciView" order="4" />
+      <window_info anchor="right" id="R Graphics" order="5" />
+      <window_info anchor="right" id="R Packages" order="6" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -301,66 +457,94 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/signing/views.py</url>
-          <line>30</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/signing/apps.py" />
     <entry file="file://$PROJECT_DIR$/signing/models.py" />
     <entry file="file://$PROJECT_DIR$/signing/admin.py" />
     <entry file="file://$PROJECT_DIR$/University_Class/settings.py" />
-    <entry file="file://$PROJECT_DIR$/University_Class/urls.py" />
-    <entry file="file://$PROJECT_DIR$/signing/urls.py" />
-    <entry file="file://$PROJECT_DIR$/templates/_nav_bar.html">
+    <entry file="file://$PROJECT_DIR$/signing/forms/signing_form.py" />
+    <entry file="file://$USER_HOME$/Documents/Przemek/Python/Lib/site-packages/django/forms/fields.py" />
+    <entry file="file://$PROJECT_DIR$/templates/base.html" />
+    <entry file="file://$PROJECT_DIR$/University_Class/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="6" lean-forward="true" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        <state relative-caret-position="272">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/signing/views.py" />
-    <entry file="file://$PROJECT_DIR$/signing/forms/signing_form.py" />
-    <entry file="file://$USER_HOME$/Documents/Przemek/Python/Lib/site-packages/django/forms/fields.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/json/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="182" column="4" selection-start-line="182" selection-start-column="4" selection-end-line="182" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db_backup">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/show_courses.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/show_lecturers.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/sign_for_courses.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="4" />
+        <state relative-caret-position="170">
+          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/_nav_bar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/import_export.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="36" lean-forward="true" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+            <marker date="1541441113226" expanded="true" signature="52:53" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signing/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="56" lean-forward="true" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/import_export.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="25" lean-forward="true" selection-start-column="25" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/sign_for_course.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="289">
+          <caret line="17" column="19" lean-forward="true" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/show_courses.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="10" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
+    <entry file="file://$PROJECT_DIR$/signing/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="13" lean-forward="true" selection-start-column="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/show_lecturers.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
+            <marker date="1541442181014" expanded="true" signature="2284:2338" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
