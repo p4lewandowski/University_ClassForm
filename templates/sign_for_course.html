@@ -13,7 +13,7 @@
 <p style="color: saddlebrown;">Student jest już przypisany do przedmiotu</p>
 {% endif %}
 
-<form method="post">
+<form method="POST">
     {% csrf_token %}
     {{ form.as_p }}
 <button type="submit">Zapisz się</button>

@@ -6,7 +6,7 @@ from django.core import serializers
 from django.http import JsonResponse, HttpResponse
 import json
 import operator
-import requests
+from django.shortcuts import render
 
 # Create your views here.
 
@@ -50,20 +50,47 @@ def show_lecturers(request):
   return render_to_response('show_lecturers.html',
                             {'lecturers': lecturers})
 
-
+@csrf_exempt
 def database_management(request):
 
-    if request.method == "POST":
-        data = {
-            'students': serializers.serialize('json', Student.objects.all(), use_natural_foreign_keys=True),
-            'lecturers': serializers.serialize('json', Lecturer.objects.all(), use_natural_foreign_keys=True),
-            'courses': serializers.serialize('json', Course.objects.all(), use_natural_foreign_keys=True),
-        }
+    # Import
+    if request.method == 'POST' and request.FILES['myfile']:
 
-        with open('db_backup', 'w') as file:
-            file.write(data)
+        ## Save a file and open it
+        # myfile = request.FILES['myfile']
+        # fs = FileSystemStorage()
+        # fs.save(myfile.name, myfile)
+        #
+        # with open('media/'+myfile.name, "r") as fin:
+        #     data = json.loads(fin.read())
 
-    return render_to_response('import_export.html')
+        # Only opening and reading in the file
+        data = json.loads(request.FILES['myfile'].read())
+
+        # Deleting previous database
+        Student.objects.all().delete()
+        Lecturer.objects.all().delete()
+        Course.objects.all().delete()
+
+        for key, value in data.items():
+            deserialized = serializers.deserialize('json', value, ignorenonexistent=True)
+            [obj.save() for obj in deserialized]
+
+    return render_to_response('database_import_export.html')
+
+def database_export(request):
+
+    data = {
+        'students': serializers.serialize('json', Student.objects.all(), use_natural_foreign_keys=True),
+        'lecturers': serializers.serialize('json', Lecturer.objects.all(), use_natural_foreign_keys=True),
+        'courses': serializers.serialize('json', Course.objects.all(), use_natural_foreign_keys=True),
+    }
+    data_string = json.dumps(data)
+
+    response = HttpResponse(data_string, content_type='application/json')
+    response['Content-Disposition'] = 'attachment; filename=export.json'
+
+    return response
 
 def export_data(request):
 
@@ -73,23 +100,3 @@ def export_data(request):
         'courses': serializers.serialize('json', Course.objects.all(), use_natural_foreign_keys=True),
     }
     return JsonResponse(data)
-
-
-# @csrf_exempt
-# def import_data(request):
-#     if request.method == 'POST':
-#         data = json.loads(request.body)
-#
-#         for key, value in data.items():
-#             deserialized = serializers.deserialize('json', value, ignorenonexistent=True)
-#             [obj.save() for obj in deserialized]
-#
-#     return HttpResponse('Success')
-#
-#
-# def delete_all(request):
-#     Student.objects.all().delete()
-#     Lecturer.objects.all().delete()
-#     Course.objects.all().delete()
-#
-#     return HttpResponse('Success')
