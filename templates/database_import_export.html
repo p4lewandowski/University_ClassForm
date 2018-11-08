@@ -6,11 +6,13 @@
 
 
 <ol>
+<h4>Eksportuj obecną bazę</h4>
 <form action="export/">
-<button type="submit">Eksport bazy</button>
+<button type="submit">Eksport</button>
 </form>
 
 <br>
+<h4>Zaimportuj bazę z pliku</h4>
   <form method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     <input type="file" required="True" name="myfile">
