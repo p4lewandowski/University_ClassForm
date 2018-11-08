@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ec60720-b8ee-44cf-9282-483c824ddfe1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/University_Class.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/University_Class.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signing/forms/signing_form.py" beforeDir="false" afterPath="$PROJECT_DIR$/signing/forms/signing_form.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signing/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/signing/models.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -127,34 +127,34 @@
         <counts>
           <entry key="HTML" value="17" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="6" />
+          <entry key="Python" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="67" />
-          <entry key="Python" value="645" />
+          <entry key="HTML" value="137" />
+          <entry key="Python" value="906" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="db_backup" value="1" />
           <entry key="html" value="17" />
-          <entry key="py" value="6" />
+          <entry key="py" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Django Console" value="14" />
-          <entry key="html" value="67" />
-          <entry key="py" value="631" />
+          <entry key="html" value="137" />
+          <entry key="py" value="892" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.48966166">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
@@ -169,11 +169,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/signing/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="136">
-                  <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
+                <state relative-caret-position="352">
+                  <caret line="39" column="26" lean-forward="true" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
                 </state>
               </provider>
             </entry>
@@ -187,11 +187,29 @@
               </provider>
             </entry>
           </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/signing/models.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="290">
+                  <caret line="35" column="39" lean-forward="true" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/signing/forms/signing_form.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <caret column="24" lean-forward="true" selection-start-column="24" selection-end-column="24" />
+                </state>
+              </provider>
+            </entry>
+          </file>
         </leaf>
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/templates/sign_for_course.html">
               <provider selected="true" editor-type-id="text-editor">
                 <state>
@@ -200,11 +218,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/templates/database_import_export.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="187">
-                  <caret line="11" selection-start-line="11" selection-end-line="11" />
+                <state relative-caret-position="204">
+                  <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
                 </state>
               </provider>
             </entry>
@@ -237,10 +255,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/signing/models.py" />
         <option value="$PROJECT_DIR$/signing/admin.py" />
         <option value="$PROJECT_DIR$/templates/base.html" />
-        <option value="$PROJECT_DIR$/signing/forms/signing_form.py" />
         <option value="$PROJECT_DIR$/templates/sign_for_courses.html" />
         <option value="$PROJECT_DIR$/templates/show_courses.html" />
         <option value="$PROJECT_DIR$/templates/show_lecturers.html" />
@@ -253,8 +269,10 @@
         <option value="$PROJECT_DIR$/templates/database_status.html" />
         <option value="$PROJECT_DIR$/University_Class/settings.py" />
         <option value="$PROJECT_DIR$/signing/urls.py" />
-        <option value="$PROJECT_DIR$/signing/views.py" />
         <option value="$PROJECT_DIR$/templates/database_import_export.html" />
+        <option value="$PROJECT_DIR$/signing/forms/signing_form.py" />
+        <option value="$PROJECT_DIR$/signing/views.py" />
+        <option value="$PROJECT_DIR$/signing/models.py" />
       </list>
     </option>
   </component>
@@ -456,14 +474,14 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32848233" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28923076" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3981289" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.28923076" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39692307" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32848233" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3024948" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.30153847" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.2962578" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="12" weight="0.32952183" />
@@ -489,11 +507,6 @@
           <url>file://$PROJECT_DIR$/signing/views.py</url>
           <line>29</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/signing/views.py</url>
-          <line>94</line>
-          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -525,7 +538,6 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/signing/apps.py" />
-    <entry file="file://$PROJECT_DIR$/signing/models.py" />
     <entry file="file://$PROJECT_DIR$/signing/admin.py" />
     <entry file="file://$USER_HOME$/Documents/Przemek/Python/Lib/site-packages/django/forms/fields.py" />
     <entry file="file://$PROJECT_DIR$/templates/base.html" />
@@ -571,9 +583,6 @@
     <entry file="file://$PROJECT_DIR$/templates/show_lecturers.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/signing/forms/signing_form.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/media/43191367_308626646615245_2915862668873039872_n.jpg" />
     <entry file="file://E:/VEnvs/Django/Lib/site-packages/django/core/handlers/base.py" />
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/json/decoder.py">
@@ -612,6 +621,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/database_import_export.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signing/forms/signing_form.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="24" lean-forward="true" selection-start-column="24" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/sign_for_course.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -619,17 +642,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/database_import_export.html">
+    <entry file="file://$PROJECT_DIR$/signing/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="352">
+          <caret line="39" column="26" lean-forward="true" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/signing/views.py">
+    <entry file="file://$PROJECT_DIR$/signing/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
+        <state relative-caret-position="290">
+          <caret line="35" column="39" lean-forward="true" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
         </state>
       </provider>
     </entry>

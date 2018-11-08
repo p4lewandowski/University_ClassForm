@@ -17,7 +17,7 @@ class Student(models.Model):
     surname = models.CharField(max_length=40)
 
     def __str__(self):
-        return "Student "+ self.name+ " " + self.surname
+        return "Student " + self.name + " " + self.surname
 
     class Meta:
         verbose_name_plural = "Students"
@@ -27,6 +27,7 @@ class Course(models.Model):
     lecturer = models.ForeignKey(Lecturer, on_delete=models.CASCADE, blank=True)
     students = models.ManyToManyField(Student, blank=True)
     slug_name = slugify(name)
+    examination = models.CharField(max_length=1, default='Z', blank=True)
 
     def __str__(self):
         return self.name
