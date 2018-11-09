@@ -52,9 +52,21 @@ def signing_process(request, course_name=None):
             # If index is used
             try:
                 # Check if person with such a index exists
-                course.students.get(index=form.data['student_index'])
-                return render(request, 'sign_for_course.html',
-                              {'form': form, 'existed_index': True, 'name': course_name})
+                Student.objects.get(index=form.data['student_index'])
+
+                # If student with this index belongs to course
+                try:
+                    if course.students.get(name=form.data['student_name'],
+                                               surname=form.data['student_surname'],
+                                           index=form.data['student_index']):
+                        return render(request, 'sign_for_course.html',
+                                      {'form': form, 'signed_to_course': True, 'name': course_name})
+
+                except ObjectDoesNotExist:
+
+                    # index in use
+                    return render(request, 'sign_for_course.html',
+                                  {'form': form, 'existed_index': True, 'name': course_name})
 
             except ObjectDoesNotExist:
 

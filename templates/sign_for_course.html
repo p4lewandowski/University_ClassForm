@@ -19,8 +19,14 @@
 <p style="color: green;">Student został zapisany na zajęcia</p>
 {% endif %}
 
+{% if signed_to_course %}
+<p style="color: green;">Student był już zapisany na zajęcia</p>
+{% endif %}
+
 {% if existed_index %}
-<p style="color: Red;">Indeks studenta jest już w użyciu!</p>
+<p style="color: Red;">Indeks studenta jest już w użyciu i<br>
+    jest przypisany do innego studenta!</p>
+
 {% endif %}
 
 
