@@ -9,7 +9,7 @@
 <h4>{{ forloop.counter}}:      {{ course.name }} </h4>
     <h5>&nbsp&nbsp&nbsp&nbsp{{ course.lecturer }} </h5>
     {% for student in course.students.all %}
-        <p> &nbsp&nbsp&nbsp&nbsp{{ forloop.counter }}: {{ student.name }} {{ student.surname }}</p>
+        <p> &nbsp&nbsp&nbsp&nbsp{{ forloop.counter }}: {{ student.name }} {{ student.surname }} {{ student.index }}</p>
     {%endfor%}
     <br>
 {%endfor%}

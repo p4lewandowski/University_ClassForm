@@ -5,7 +5,17 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/signing/forms/signing_form.py" beforeDir="false" afterPath="$PROJECT_DIR$/signing/forms/signing_form.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signing/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/signing/migrations/0002_student_index.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/signing/migrations/0003_remove_student_index.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/signing/migrations/0004_course_examination.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/signing/migrations/0005_auto_20181108_1640.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/signing/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/signing/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signing/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/signing/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signing/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/signing/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/database_import_export.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/database_import_export.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/show_courses.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/show_courses.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/sign_for_course.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sign_for_course.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -116,7 +126,7 @@
     <session id="381987696">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.29" value="1" />
           <entry key="project.opened" value="2" />
@@ -125,73 +135,57 @@
       <usages-collector id="statistics.js.language.service.starts" />
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="17" />
+          <entry key="HTML" value="25" />
+          <entry key="JSON" value="1" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="9" />
+          <entry key="Python" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="137" />
-          <entry key="Python" value="906" />
+          <entry key="HTML" value="356" />
+          <entry key="Python" value="1799" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="db_backup" value="1" />
-          <entry key="html" value="17" />
-          <entry key="py" value="9" />
+          <entry key="html" value="25" />
+          <entry key="json" value="1" />
+          <entry key="py" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Django Console" value="14" />
-          <entry key="html" value="137" />
-          <entry key="py" value="892" />
+          <entry key="html" value="356" />
+          <entry key="py" value="1785" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.48966166">
+    <splitter split-orientation="horizontal" split-proportion="0.5197368">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/signing/urls.py">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/signing/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="187">
-                  <caret line="14" selection-start-line="14" selection-end-line="14" />
+                <state relative-caret-position="102">
+                  <caret line="24" selection-start-line="24" selection-end-line="24" />
                   <folding>
-                    <element signature="e#0#25#0" expanded="true" />
+                    <element signature="e#0#55#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/signing/views.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="352">
-                  <caret line="39" column="26" lean-forward="true" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/University_Class/settings.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1819">
-                  <caret line="110" column="22" selection-start-line="110" selection-start-column="22" selection-end-line="110" selection-end-column="22" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/signing/models.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="290">
-                  <caret line="35" column="39" lean-forward="true" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
+                <state relative-caret-position="272">
+                  <caret line="17" column="80" selection-start-line="17" selection-start-column="80" selection-end-line="17" selection-end-column="80" />
                 </state>
               </provider>
             </entry>
@@ -199,8 +193,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/signing/forms/signing_form.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret column="24" lean-forward="true" selection-start-column="24" selection-end-column="24" />
+                <state relative-caret-position="85">
+                  <caret line="5" column="35" lean-forward="true" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
                 </state>
               </provider>
             </entry>
@@ -209,20 +203,24 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/templates/sign_for_course.html">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/templates/database_import_export.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret column="23" selection-start-column="23" selection-end-column="23" />
+                <state relative-caret-position="213">
+                  <caret line="14" column="7" lean-forward="true" selection-start-line="12" selection-end-line="14" selection-end-column="7" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/database_import_export.html">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/templates/sign_for_course.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="204">
-                  <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+                <state relative-caret-position="163">
+                  <caret line="22" column="32" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+                  <folding>
+                    <element signature="n#style#0;n#p#2;n#ol#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#p#3;n#ol#0;n#!!top" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -258,21 +256,21 @@
         <option value="$PROJECT_DIR$/signing/admin.py" />
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/templates/sign_for_courses.html" />
-        <option value="$PROJECT_DIR$/templates/show_courses.html" />
         <option value="$PROJECT_DIR$/templates/show_lecturers.html" />
         <option value="$PROJECT_DIR$/University_Class/urls.py" />
         <option value="$PROJECT_DIR$/signing/import_export.py" />
         <option value="$PROJECT_DIR$/import_export.py" />
         <option value="$PROJECT_DIR$/templates/_nav_bar.html" />
-        <option value="$PROJECT_DIR$/templates/sign_for_course.html" />
         <option value="$PROJECT_DIR$/templates/import_export.html" />
         <option value="$PROJECT_DIR$/templates/database_status.html" />
         <option value="$PROJECT_DIR$/University_Class/settings.py" />
-        <option value="$PROJECT_DIR$/signing/urls.py" />
         <option value="$PROJECT_DIR$/templates/database_import_export.html" />
+        <option value="$PROJECT_DIR$/signing/urls.py" />
+        <option value="$PROJECT_DIR$/templates/show_courses.html" />
         <option value="$PROJECT_DIR$/signing/forms/signing_form.py" />
-        <option value="$PROJECT_DIR$/signing/views.py" />
         <option value="$PROJECT_DIR$/signing/models.py" />
+        <option value="$PROJECT_DIR$/signing/views.py" />
+        <option value="$PROJECT_DIR$/templates/sign_for_course.html" />
       </list>
     </option>
   </component>
@@ -299,6 +297,11 @@
             <path>
               <item name="University_ClassForms" type="b2602c69:ProjectViewProjectNode" />
               <item name="University_ClassForms" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="University_ClassForms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="University_ClassForms" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="University_ClassForms" type="b2602c69:ProjectViewProjectNode" />
@@ -343,11 +346,12 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Aniesia\Downloads\University_Class\templates" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Virnael\PycharmProjects\University_ClassForms" />
+      <recent name="C:\Users\Aniesia\Downloads\University_Class\templates" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Virnael\PycharmProjects\University_ClassForms\media" />
       <recent name="C:\Users\Aniesia\Downloads\University_Class\templates" />
     </key>
   </component>
@@ -474,15 +478,15 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32848233" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.28923076" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39692307" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49920633" weight="0.28923076" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.32307693" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32848233" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.30153847" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.2962578" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50079364" side_tool="true" weight="0.28923076" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.30153847" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.29538462" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="12" weight="0.32952183" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -505,20 +509,24 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/signing/views.py</url>
-          <line>29</line>
-          <option name="timeStamp" value="1" />
+          <line>24</line>
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Python.DjangoServer">
-        <watch expression="request.FILES['myfile']" language="Python" />
-        <watch expression="request.FILES['myfile'].read()" language="Python" />
+        <watch expression="request.POST" language="Python" />
       </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>request.POST</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>request.FILES['myfile'].read()</expression-string>
         <language-id>Python</language-id>
@@ -555,9 +563,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/show_courses.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/sign_for_courses.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -576,6 +581,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="36" lean-forward="true" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -604,55 +612,79 @@
     </entry>
     <entry file="file://E:/VEnvs/Django/Lib/site-packages/django/core/handlers/exception.py" />
     <entry file="file://E:/VEnvs/Django/Lib/site-packages/django/views/decorators/csrf.py" />
+    <entry file="file://$PROJECT_DIR$/University_Class/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="110" column="22" selection-start-line="110" selection-start-column="22" selection-end-line="110" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/new_db.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/show_courses.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/django/core/handlers/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="123" selection-start-line="123" selection-end-line="123" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/signing/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="272">
+          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/University_Class/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1819">
-          <caret line="110" column="22" selection-start-line="110" selection-start-column="22" selection-end-line="110" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/database_import_export.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="213">
+          <caret line="14" column="7" lean-forward="true" selection-start-line="12" selection-end-line="14" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/signing/forms/signing_form.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="24" lean-forward="true" selection-start-column="24" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/sign_for_course.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="23" selection-start-column="23" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/signing/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="39" column="26" lean-forward="true" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
+        <state relative-caret-position="85">
+          <caret line="5" column="35" lean-forward="true" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/signing/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="35" column="39" lean-forward="true" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
+        <state relative-caret-position="272">
+          <caret line="17" column="80" selection-start-line="17" selection-start-column="80" selection-end-line="17" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/sign_for_course.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="22" column="32" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+          <folding>
+            <element signature="n#style#0;n#p#2;n#ol#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#3;n#ol#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signing/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

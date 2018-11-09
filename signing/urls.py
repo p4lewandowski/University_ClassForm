@@ -11,5 +11,7 @@ urlpatterns = [
     path('nav/', TemplateView.as_view(template_name='base.html')),
 
     path('database/', views.database_management, name='database'),
-    path('database/export/', views.database_export, name='database_export'),
+    path('database/export_old/', views.database_export_old, name='database_export'),
+    path('database/export_new/', views.database_export_new, name='database_export'),
+
 ]

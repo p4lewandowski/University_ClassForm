@@ -13,11 +13,27 @@
 <p style="color: saddlebrown;">Student jest już przypisany do przedmiotu</p>
 {% endif %}
 
+
+{% if existed_index %}
+
+<p style="color: red;">Indeks studenta jest już w użyciu!</p>
+<p style="color: red;">Czy chcesz nadpisać obecny rekord?</p>
+<form method="POST">
+{% csrf_token %}
+<input id="rewrite" type="hidden" name="rewrite" value=1>
+<button type="submit">Nadpisz</button>
+</form>
+
+    {% else %}
+
 <form method="POST">
     {% csrf_token %}
     {{ form.as_p }}
 <button type="submit">Zapisz się</button>
 </form>
+
+{% endif %}
+
 
 </body>
 </html>

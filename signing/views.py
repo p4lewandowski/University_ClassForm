@@ -25,9 +25,19 @@ def signing_process(request, course_name=None):
         if form.is_valid():
 
             course = Course.objects.get(name=course_name)
-            temp, created = course.students.get_or_create(name=form.data['student_name'],
-                                                          surname=form.data['student_surname'])
-            if not created:
+
+            index_exists = course.students.get(index=form.data['student_index'])
+
+            if index_exists:
+                return render(request, 'sign_for_course.html',
+                              {'form': form, 'existed_index': True, 'name': course_name})
+
+            person, created_identity = course.students.get_or_create(name=form.data['student_name'],
+                                                                     surname=form.data['student_surname'])
+
+            if not created_identity:
+                setattr(person, 'index', form.data['student_index'])
+                person.save()
                 return render(request, 'sign_for_course.html',
                               {'form': form, 'existed': True, 'name': course_name})
 
@@ -78,7 +88,22 @@ def database_management(request):
 
     return render_to_response('database_import_export.html')
 
-def database_export(request):
+def database_export_old(request):
+
+    data = {
+        'students': serializers.serialize('json', Student.objects.all(), use_natural_foreign_keys=True,
+                                          fields=('name', 'surname')),
+        'lecturers': serializers.serialize('json', Lecturer.objects.all(), use_natural_foreign_keys=True),
+        'courses': serializers.serialize('json', Course.objects.all(), use_natural_foreign_keys=True),
+    }
+    data_string = json.dumps(data)
+
+    response = HttpResponse(data_string, content_type='application/json')
+    response['Content-Disposition'] = 'attachment; filename=export.json'
+
+    return response
+
+def database_export_new(request):
 
     data = {
         'students': serializers.serialize('json', Student.objects.all(), use_natural_foreign_keys=True),
