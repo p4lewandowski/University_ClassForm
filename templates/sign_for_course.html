@@ -6,29 +6,56 @@
 <ol>
 <h2>Zapisy na zajęcia</h2>
 <h3>{{ name }}</h3>
+
+{% if new %}
+<p style="color: green;">Dodano nowego studenta</p>
+{% endif %}
+
+{% if old %}
+<p style="color: green;">Dopisano indeks do studenta</p>
+{% endif %}
+
 {% if signed %}
 <p style="color: green;">Student został zapisany na zajęcia</p>
 {% endif %}
-{% if existed %}
-<p style="color: saddlebrown;">Student jest już przypisany do przedmiotu</p>
+
+{% if existed_index %}
+<p style="color: Red;">Indeks studenta jest już w użyciu!</p>
 {% endif %}
 
 
-{% if existed_index %}
+{% if found_identity %}
 
-<p style="color: red;">Indeks studenta jest już w użyciu!</p>
-<p style="color: red;">Czy chcesz nadpisać obecny rekord?</p>
+<p style="color: red;">Osoba o takim imieniu i nazwisku już istnieje!</p>
+<p style="color: red;">Czy chcesz przypisać do niej indeks, czy stworzyć nowy rekord?</p>
 <form method="POST">
 {% csrf_token %}
-<input id="rewrite" type="hidden" name="rewrite" value=1>
-<button type="submit">Nadpisz</button>
+<input id="assign" type="hidden" name="assign" value=1>
+<button type="submit">Przypisz indeks</button>
+<input id="confirmation" type="hidden" name="confirmation" value=1>
+<input id="student_name" type="hidden" name="student_name" value={{ student_name }}>
+<input id="student_surname" type="hidden" name="student_surname" value={{ student_surname }}>
+<input id="student_index" type="hidden" name="student_index" value={{ student_index }}>
 </form>
 
+<form method="POST">
+{% csrf_token %}
+<input id="assign" type="hidden" name="assign" value=0>
+    <input id="confirmation" type="hidden" name="confirmation" value=1>
+<input id="student_name" type="hidden" name="student_name" value={{ student_name }}>
+<input id="student_surname" type="hidden" name="student_surname" value={{ student_surname }}>
+<input id="student_index" type="hidden" name="student_index" value={{ student_index }}>
+<button type="submit">Stwórz nowy rekord</button>
+</form>
+
+
     {% else %}
+
 
 <form method="POST">
     {% csrf_token %}
     {{ form.as_p }}
+    <input id="confirmation" type="hidden" name="confirmation" value=0>
 <button type="submit">Zapisz się</button>
 </form>
 

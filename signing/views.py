@@ -7,6 +7,8 @@ from django.http import JsonResponse, HttpResponse
 import json
 import operator
 from django.shortcuts import render
+from django.core.exceptions import ObjectDoesNotExist
+
 
 # Create your views here.
 
@@ -26,23 +28,61 @@ def signing_process(request, course_name=None):
 
             course = Course.objects.get(name=course_name)
 
-            index_exists = course.students.get(index=form.data['student_index'])
+            # If question was asked what to do with index
+            if form.data['confirmation']=='1':
+                # If update
+                if form.data['assign']=='1':
+                    student = course.students.get(name=form.data['student_name'],
+                                                  surname=form.data['student_surname'])
+                    setattr(student, 'index', form.data['student_index'])
+                    student.save()
+                    return render(request, 'sign_for_course.html',
+                                  {'form': form, 'signed': True, 'name': course_name, 'old':True})
 
-            if index_exists:
+                # if create new
+                else:
+                    course.students.create(name=form.data['student_name'],
+                                           surname=form.data['student_surname'],
+                                           index=form.data['student_index'])
+                    return render(request, 'sign_for_course.html',
+                                  {'form': form, 'signed': True, 'name': course_name, 'new':True})
+
+
+            # If index is used
+            try:
+                # Check if person with such a index exists
+                course.students.get(index=form.data['student_index'])
                 return render(request, 'sign_for_course.html',
                               {'form': form, 'existed_index': True, 'name': course_name})
 
-            person, created_identity = course.students.get_or_create(name=form.data['student_name'],
-                                                                     surname=form.data['student_surname'])
+            except ObjectDoesNotExist:
 
-            if not created_identity:
-                setattr(person, 'index', form.data['student_index'])
-                person.save()
-                return render(request, 'sign_for_course.html',
-                              {'form': form, 'existed': True, 'name': course_name})
+                # If name and surname is used - and no index is present - ask what to do
+                try:
+                    student = course.students.get(name=form.data['student_name'],
+                                                            surname=form.data['student_surname'])
+                    # Does it have index
+                    if getattr(student, 'index'):
+                        raise ObjectDoesNotExist
 
-            return render(request, 'sign_for_course.html',
-                                          {'form': form, 'signed': True, 'name': course_name})
+                    # If not ask if rewrite required or new
+                    return render(request, 'sign_for_course.html',
+                                  {'form': form, 'found_identity':
+                                      True, 'name': course_name,
+                                  'student_name': form.data['student_name'],
+                                   'student_surname': form.data['student_surname'],
+                                   'student_index': form.data['student_index']})
+
+
+                # If no index or identity present
+                except ObjectDoesNotExist:
+
+                    course.students.create(name=form.data['student_name'],
+                                            surname=form.data['student_surname'],
+                                            index=form.data['student_index'])
+
+                    return render(request, 'sign_for_course.html',
+                                                  {'form': form, 'signed': True, 'name': course_name})
 
     return render(request, 'sign_for_course.html', {'form': form, 'name': course_name})
 
