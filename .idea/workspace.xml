@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ec60720-b8ee-44cf-9282-483c824ddfe1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/University_Class.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/University_Class.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/signing/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/signing/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/sign_for_course.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sign_for_course.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -87,13 +83,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="635" />
-          <entry key="py" value="1189" />
+          <entry key="py" value="1611" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="635" />
-          <entry key="Python" value="1189" />
+          <entry key="Python" value="1611" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -101,7 +97,7 @@
           <entry key="db_backup" value="2" />
           <entry key="html" value="7" />
           <entry key="jpg" value="1" />
-          <entry key="py" value="18" />
+          <entry key="py" value="19" />
           <entry key="sqlite3" value="1" />
         </counts>
       </usages-collector>
@@ -110,7 +106,7 @@
           <entry key="HTML" value="7" />
           <entry key="Image" value="1" />
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="Python" value="18" />
+          <entry key="Python" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -165,8 +161,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/signing/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="422">
-                  <caret line="44" column="80" lean-forward="true" selection-start-line="44" selection-start-column="80" selection-end-line="44" selection-end-column="80" />
+                <state relative-caret-position="354">
+                  <caret line="36" column="68" selection-start-line="36" selection-start-column="68" selection-end-line="36" selection-end-column="68" />
                   <folding>
                     <element signature="e#0#55#0" expanded="true" />
                   </folding>
@@ -244,6 +240,7 @@
       <find>existed_index</find>
       <find>existed</find>
       <find>signed</find>
+      <find>defa</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -268,8 +265,8 @@
         <option value="$PROJECT_DIR$/templates/show_courses.html" />
         <option value="$PROJECT_DIR$/signing/forms/signing_form.py" />
         <option value="$PROJECT_DIR$/signing/models.py" />
-        <option value="$PROJECT_DIR$/signing/views.py" />
         <option value="$PROJECT_DIR$/templates/sign_for_course.html" />
+        <option value="$PROJECT_DIR$/signing/views.py" />
       </list>
     </option>
   </component>
@@ -514,8 +511,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/signing/views.py</url>
-          <line>33</line>
-          <option name="timeStamp" value="22" />
+          <line>63</line>
+          <option name="timeStamp" value="24" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -523,39 +520,64 @@
       <configuration name="Python.DjangoServer">
         <watch expression="request.POST" language="Python" />
         <watch expression="course.students" language="Python" />
-        <watch expression="getattr(student, 'index')" language="Python" />
+        <watch expression="course.students.get(name=form.data['student_name'], surname=form.data['student_surname'], index=None)" language="Python" />
+        <watch expression="course.students.get(name=form.data['student_name'], surname=form.data['student_surname'], index='')" language="Python" />
+        <watch expression="course.students.get(name=form.data['student_name'], surname=form.data['student_surname'], index=0)" language="Python" />
+        <watch expression="course.students.get(name=form.data['student_name'], surname=form.data['student_surname'], index=False)" language="Python" />
+        <watch expression="course.students.get(name='a', surname='a')" language="Python" />
+        <watch expression="course.students.get(name='a', surname='a', index=None)" language="Python" />
+        <watch expression="course.students.get(name='a', surname='a', index__exact=None)" language="Python" />
+        <watch expression="course.students.get(name='a', surname='a', index__isnull=True)" language="Python" />
+        <watch expression="course.students.get(name='a', surname='a', index__isnull=True)" language="Python" />
+        <watch expression="course.students.exclude(index__isnull=False).get(name='a', surname='a')" language="Python" />
+        <watch expression="course.students.exclude(index=12).get(name='a', surname='a')" language="Python" />
       </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
       <expression>
-        <expression-string>getattr(student, 'index')</expression-string>
+        <expression-string>course.students.get(name='a', surname='a', index__isnull=True)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>course.students</expression-string>
+        <expression-string>course.students.exclude(index=12).get(name='a', surname='a')</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>request.POST</expression-string>
+        <expression-string>course.students.exclude(index=112).get(name='a', surname='a')</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>request.FILES['myfile'].read()</expression-string>
+        <expression-string>course.students.get(name='a', surname='a')</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>request.FILES['myfile']</expression-string>
+        <expression-string>course.students.exclude(index__isnull=False).get(name='a', surname='a')</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>myfile.read()</expression-string>
+        <expression-string>course.students.exclude(index__isnull=True).get(name='a', surname='a')</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>course.students.get(name='a', surname='a').exclude()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>course.students.get(name='a', surname='a', index__isnull=False)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>course.students.get(name='a', surname='a', index__exact=None)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -649,13 +671,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/signing/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db.sqlite3">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -701,13 +716,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/signing/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/sign_for_course.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -721,10 +729,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/signing/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signing/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="17" column="72" selection-start-line="17" selection-start-column="72" selection-end-line="17" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/signing/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="44" column="80" lean-forward="true" selection-start-line="44" selection-start-column="80" selection-end-line="44" selection-end-column="80" />
+        <state relative-caret-position="354">
+          <caret line="36" column="68" selection-start-line="36" selection-start-column="68" selection-end-line="36" selection-end-column="68" />
           <folding>
             <element signature="e#0#55#0" expanded="true" />
           </folding>

@@ -33,7 +33,8 @@ def signing_process(request, course_name=None):
                 # If update
                 if form.data['assign']=='1':
                     student = course.students.get(name=form.data['student_name'],
-                                                  surname=form.data['student_surname'])
+                                                  surname=form.data['student_surname'],
+                                                  index__isnull=True)
                     setattr(student, 'index', form.data['student_index'])
                     student.save()
                     return render(request, 'sign_for_course.html',
@@ -59,11 +60,10 @@ def signing_process(request, course_name=None):
 
                 # If name and surname is used - and no index is present - ask what to do
                 try:
+                    # Find student without index - else throw error and create new
                     student = course.students.get(name=form.data['student_name'],
-                                                            surname=form.data['student_surname'])
-                    # Does it have index
-                    if getattr(student, 'index'):
-                        raise ObjectDoesNotExist
+                                                  surname=form.data['student_surname'],
+                                                  index__isnull=True)
 
                     # If not ask if rewrite required or new
                     return render(request, 'sign_for_course.html',
