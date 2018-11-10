@@ -13,5 +13,6 @@ urlpatterns = [
     path('database/', views.database_management, name='database'),
     path('database/export_old/', views.database_export_old, name='database_export'),
     path('database/export_new/', views.database_export_new, name='database_export'),
+    path('database/delete/', views.database_delete),
 
 ]

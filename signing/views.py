@@ -8,6 +8,8 @@ import json
 import operator
 from django.shortcuts import render
 from django.core.exceptions import ObjectDoesNotExist
+from django.db import IntegrityError
+from django.shortcuts import redirect
 
 
 # Create your views here.
@@ -32,9 +34,9 @@ def signing_process(request, course_name=None):
             if form.data['confirmation']=='1':
                 # If update
                 if form.data['assign']=='1':
-                    student = course.students.get(name=form.data['student_name'],
+                    student = course.students.filter(name=form.data['student_name'],
                                                   surname=form.data['student_surname'],
-                                                  index__isnull=True)
+                                                  index__isnull=True).first()
                     setattr(student, 'index', form.data['student_index'])
                     student.save()
                     return render(request, 'sign_for_course.html',
@@ -73,9 +75,11 @@ def signing_process(request, course_name=None):
                 # If name and surname is used - and no index is present - ask what to do
                 try:
                     # Find student without index - else throw error and create new
-                    student = course.students.get(name=form.data['student_name'],
+                    student = course.students.filter(name=form.data['student_name'],
                                                   surname=form.data['student_surname'],
-                                                  index__isnull=True)
+                                                  index__isnull=True).first()
+                    if not student:
+                        raise ObjectDoesNotExist
 
                     # If not ask if rewrite required or new
                     return render(request, 'sign_for_course.html',
@@ -128,15 +132,16 @@ def database_management(request):
 
         # Only opening and reading in the file
         data = json.loads(request.FILES['myfile'].read())
+        try:
+            for key, value in data.items():
+                for obj in serializers.deserialize('json', value):
+                    # if key == 'students':
+                    #     Student.
+                    obj.get_or_create()
+            return render_to_response('database_import_export.html', {'success': True})
 
-        # Deleting previous database
-        Student.objects.all().delete()
-        Lecturer.objects.all().delete()
-        Course.objects.all().delete()
-
-        for key, value in data.items():
-            deserialized = serializers.deserialize('json', value, ignorenonexistent=True)
-            [obj.save() for obj in deserialized]
+        except IntegrityError:
+            return render_to_response('database_import_export.html', {'error': True})
 
     return render_to_response('database_import_export.html')
 
@@ -168,12 +173,22 @@ def database_export_new(request):
     response['Content-Disposition'] = 'attachment; filename=export.json'
 
     return response
+#
+# def export_data(request):
+#
+#     data = {
+#         'students': serializers.serialize('json', Student.objects.all(), use_natural_foreign_keys=True),
+#         'lecturers': serializers.serialize('json', Lecturer.objects.all(), use_natural_foreign_keys=True),
+#         'courses': serializers.serialize('json', Course.objects.all(), use_natural_foreign_keys=True),
+#     }
+#     return JsonResponse(data)
 
-def export_data(request):
+@csrf_exempt
+def database_delete(request):
 
-    data = {
-        'students': serializers.serialize('json', Student.objects.all(), use_natural_foreign_keys=True),
-        'lecturers': serializers.serialize('json', Lecturer.objects.all(), use_natural_foreign_keys=True),
-        'courses': serializers.serialize('json', Course.objects.all(), use_natural_foreign_keys=True),
-    }
-    return JsonResponse(data)
+    # Deleting previous database
+    Student.objects.all().delete()
+    Lecturer.objects.all().delete()
+    Course.objects.all().delete()
+
+    return redirect('database')

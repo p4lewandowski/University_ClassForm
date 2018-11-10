@@ -4,8 +4,8 @@
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 
-
 <ol>
+
 <h4>Eksportuj obecną bazę</h4>
 <form action="export_old/">
 <button type="submit">Stary Format</button>
@@ -15,13 +15,23 @@
 </form>
 
 <br>
+
 <h4>Zaimportuj bazę z pliku</h4>
-  <form method="POST" enctype="multipart/form-data">
+ <form method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     <input type="file" required="True" name="myfile">
       <button type="submit" width="500">Importuj</button>
   </form>
+
+
+{% if success %}
+<p style="color: green;">Zaimportowano!</p>
+{% endif %}
+{% if error %}
+<p style="color: red;">Niezgodność indeksów!</p>
+{% endif %}
 </ol>
+
 
 
 {% endblock %}
