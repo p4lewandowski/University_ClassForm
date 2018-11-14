@@ -3,15 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5ec60720-b8ee-44cf-9282-483c824ddfe1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/export.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/export_morebio_morelecturers.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/export_pre.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/nowe.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/stare.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/signing/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/signing/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/signing/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/signing/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/database_import_export.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/database_import_export.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/show_courses.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/show_courses.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -83,24 +75,25 @@
     <session id="819653199">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.18" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="1123" />
-          <entry key="py" value="2342" />
+          <entry key="py" value="2504" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="1123" />
-          <entry key="Python" value="2342" />
+          <entry key="Python" value="2504" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -108,7 +101,7 @@
           <entry key="db_backup" value="2" />
           <entry key="html" value="10" />
           <entry key="jpg" value="1" />
-          <entry key="py" value="22" />
+          <entry key="py" value="24" />
           <entry key="sqlite3" value="1" />
         </counts>
       </usages-collector>
@@ -117,7 +110,7 @@
           <entry key="HTML" value="10" />
           <entry key="Image" value="1" />
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="Python" value="22" />
+          <entry key="Python" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -172,32 +165,14 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/signing/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="320">
-                  <caret line="138" column="34" lean-forward="true" selection-start-line="138" selection-start-column="34" selection-end-line="138" selection-end-column="34" />
+                <state relative-caret-position="307">
+                  <caret line="41" column="38" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="38" />
                   <folding>
                     <element signature="e#0#55#0" expanded="true" />
-                    <marker date="1541841468811" expanded="true" signature="7729:7730" ph="..." />
-                    <marker date="1541841468811" expanded="true" signature="7729:7731" ph="..." />
-                    <marker date="1541841468811" expanded="true" signature="7729:7735" ph="..." />
+                    <marker date="1542184807012" expanded="true" signature="8001:8002" ph="..." />
+                    <marker date="1542184807012" expanded="true" signature="8001:8003" ph="..." />
+                    <marker date="1542184807012" expanded="true" signature="8001:8007" ph="..." />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/signing/admin.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="68">
-                  <caret line="4" selection-start-line="4" selection-end-line="4" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/signing/forms/signing_form.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="68">
-                  <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
                 </state>
               </provider>
             </entry>
@@ -211,28 +186,15 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="510">
                   <caret line="30" column="43" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
-                  <folding>
-                    <element signature="n#style#0;n#p#1;n#ol#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#p#1;n#ol#0;n#!!top" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/sign_for_course.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="340">
-                  <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/templates/show_courses.html">
+            <entry file="file://$PROJECT_DIR$/templates/sign_for_course.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="306">
-                  <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+                <state relative-caret-position="238">
+                  <caret line="32" column="20" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="20" />
                 </state>
               </provider>
             </entry>
@@ -265,6 +227,7 @@
       <find>else</find>
       <find>inte</find>
       <find>delete</find>
+      <find>found_identity</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -494,7 +457,7 @@
     <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15876517" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16041896" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -526,23 +489,40 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/signing/views.py</url>
-          <line>139</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="Python.DjangoServer">
-        <watch expression="obj.object" language="Python" />
+        <watch expression="course.students.filter(name=form.data['student_name'],surname=form.data['student_surname'])" language="Python" />
+        <watch expression="Student.objects.filter(name=form.data['student_name'],                                                   surname=form.data['student_surname'])" language="Python" />
       </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>Student.objects.filter(name=form.data['student_name'],                                                   surname=form.data['student_surname'])</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>course.students.filter(name=form.data['student_name'],surname=form.data['student_surname'])</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>course.students.filter(name=form.data['student_name'],surname=form.data['student_surname')</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>form.data</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>student = course.students.filter(name=form.data['student_name'], surname=form.data['student_surname'])</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>obj.object</expression-string>
         <language-id>Python</language-id>
@@ -565,31 +545,6 @@
       </expression>
       <expression>
         <expression-string>[object for object in deserialized]</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>[obj for object in deserialized]</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>[obj.object for obj in deserialized]</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>student = course.students.filter(name=form.data['student_name'],                                                   surname='chuj',                                                   index__isnull=True).first()</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>len(course.students.filter(name=form.data['student_name'],  surname=form.data['student_surname'],     index__isnull=True))</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>course.students.filter(name=form.data['student_name'],  surname=form.data['student_surname'],     index__isnull=True)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -697,20 +652,6 @@
     <entry file="file://$PROJECT_DIR$/signing/tests.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/signing/forms/signing_form.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/sign_for_course.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/signing/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -724,28 +665,31 @@
     <entry file="file://$PROJECT_DIR$/templates/show_lecturers.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/signing/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="17" column="72" selection-start-line="17" selection-start-column="72" selection-end-line="17" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/database_import_export.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="30" column="43" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
-          <folding>
-            <element signature="n#style#0;n#p#1;n#ol#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#1;n#ol#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/show_courses.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/signing/models.py">
+    <entry file="file://$PROJECT_DIR$/signing/forms/signing_form.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" column="72" selection-start-line="17" selection-start-column="72" selection-end-line="17" selection-end-column="72" />
+        <state relative-caret-position="68">
+          <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -756,15 +700,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/sign_for_course.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="32" column="20" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/genericpath.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/signing/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="138" column="34" lean-forward="true" selection-start-line="138" selection-start-column="34" selection-end-line="138" selection-end-column="34" />
+        <state relative-caret-position="307">
+          <caret line="41" column="38" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="38" />
           <folding>
             <element signature="e#0#55#0" expanded="true" />
-            <marker date="1541841468811" expanded="true" signature="7729:7730" ph="..." />
-            <marker date="1541841468811" expanded="true" signature="7729:7731" ph="..." />
-            <marker date="1541841468811" expanded="true" signature="7729:7735" ph="..." />
+            <marker date="1542184807012" expanded="true" signature="8001:8002" ph="..." />
+            <marker date="1542184807012" expanded="true" signature="8001:8003" ph="..." />
+            <marker date="1542184807012" expanded="true" signature="8001:8007" ph="..." />
           </folding>
         </state>
       </provider>

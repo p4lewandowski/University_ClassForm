@@ -34,14 +34,14 @@ def signing_process(request, course_name=None):
             if form.data['confirmation']=='1':
                 # If update
                 if form.data['assign']=='1':
-                    student = course.students.filter(name=form.data['student_name'],
+                    student = Student.objects.get(name=form.data['student_name'],
                                                   surname=form.data['student_surname'],
-                                                  index__isnull=True).first()
+                                                  index__isnull=True)
                     setattr(student, 'index', form.data['student_index'])
                     student.save()
+                    course.students.add(student)
                     return render(request, 'sign_for_course.html',
                                   {'form': form, 'signed': True, 'name': course_name, 'old':True})
-
                 # if create new
                 else:
                     course.students.create(name=form.data['student_name'],
@@ -75,10 +75,14 @@ def signing_process(request, course_name=None):
                 # If name and surname is used - and no index is present - ask what to do
                 try:
                     # Find student without index - else throw error and create new
-                    student = course.students.filter(name=form.data['student_name'],
+                    student = Student.objects.filter(name=form.data['student_name'],
                                                   surname=form.data['student_surname'],
                                                   index__isnull=True).first()
-                    if not student:
+                    if student:
+                        Student.objects.get(name=form.data['student_name'],
+                                            surname=form.data['student_surname'],
+                                            index__isnull=True)
+                    else:
                         raise ObjectDoesNotExist
 
                     # If not ask if rewrite required or new
@@ -137,7 +141,7 @@ def database_management(request):
                 for obj in serializers.deserialize('json', value):
                     # if key == 'students':
                     #     Student.
-                    obj.get_or_create()
+                    obj.save()
             return render_to_response('database_import_export.html', {'success': True})
 
         except IntegrityError:
