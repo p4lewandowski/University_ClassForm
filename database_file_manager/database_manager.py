@@ -66,10 +66,10 @@ while loop:  ## While loop which will keep going until loop = False
 
     # DB Save
     elif choice == 2:
-        fname = input("Saving the database.\nEnter the file name: ")
         if(data.empty):
             print("No data to save!")
         else:
+            fname = input("Saving the database.\nEnter the file name: ")
             data.to_csv(fname+".csv", sep=';')
 
     # DB Edit
