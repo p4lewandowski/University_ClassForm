@@ -4,6 +4,7 @@ import os.path
 import os
 clear = lambda: os.system('cls')
 data = pd.DataFrame()
+import time
 
 def print_menu():       ## Your menu design here
     print();print(30 * "-" , "MENU" , 30 * "-")
@@ -35,9 +36,12 @@ def print_record(id):
 
 def print_save_menu():
     print("Saving file - choose option")
-    print("1 - comma format")
-    print("2 - dot format")
+    print("1 - semicolon format")
+    print("2 - tab format")
     print("3 - exit save submenu")
+
+
+
 
 def save_database():
     loop_save = True
@@ -54,13 +58,13 @@ def save_database():
 
         if choice==1:
             fname=input("Enter filename: ")
-            data.to_csv(fname, sep=',', index=False)
+            data.to_csv(fname, sep=';', index=False)
             print("Saved.")
 
 
         elif choice ==2:
             fname=input("Enter filename: ")
-            data.to_csv(fname, sep=';', index=False)
+            data.to_csv(fname, sep='\t', index=False)
             print("Saved.")
 
         elif choice ==3:
@@ -70,17 +74,23 @@ def save_database():
 
         else:
             print("Wrong option chosen!")
+            time.sleep(2)
 
 def load_database():
     print("Loading the database")
     while True:
         fname = input("Enter the file name: ")
-        if os.path.isfile(fname) and fname.split('.')[-1] == 'csv':
+        if os.path.isfile(fname):
             break
         else:
-            print("File does not exist or wrong format!")
+            print("File does not exist!")
+            time.sleep(2)
 
     data = pd.read_csv(fname, delimiter=';')
+    if data.shape[1] ==1:
+        data = pd.read_csv(fname, delimiter='\t')
+
+    return data
 
 def edit_record(id):
     loop_edit_record = True
@@ -108,6 +118,7 @@ def edit_record(id):
 
         else:
             print("Incorrect column index!")
+            time.sleep(2)
 
 
 def edit_menu():
@@ -116,6 +127,7 @@ def edit_menu():
         print_data()
         print_sub_menu()
         print()
+
         try:
             choice = int(input("Enter your choice [1-4]: "))
         except ValueError:
@@ -127,8 +139,9 @@ def edit_menu():
                 id = int(id)
                 data.drop(int(id), inplace=True)
                 print("Deleted.")
-            except ValueError and KeyError:
+            except ValueError or KeyError:
                 print("Not a number or out of range!")
+                time.sleep(2)
 
         elif choice == 2:
             try:
@@ -138,15 +151,22 @@ def edit_menu():
                     edit_record(id)
                 else:
                     print("Index out of range!")
+                    time.sleep(2)
 
-            except ValueError and KeyError:
+            except ValueError or KeyError:
                 print("Not a number!")
+                time.sleep(2)
 
         elif choice == 3:
             print("Adding new record.")
             new_id = data.shape[0]
             data.loc[new_id] = \
                 [input(list(data.columns.values+": ")[n]) for n in range(len(list(data.columns.values)))]
+            if False in [data.loc[new_id][x] != '' for x in range(len(list(data.columns.values)))]:
+                print("Empty value in record! Record not added!")
+                time.sleep(2)
+                data.drop(int(new_id), inplace=True)
+
 
 
         elif choice == 4:
@@ -154,6 +174,7 @@ def edit_menu():
             loop_edit = False  # This will make the while loop to end as not value of loop is set to False
         else:
             print("Wrong input!")
+            time.sleep(2)
         clear()
 
 loop = True
@@ -168,20 +189,13 @@ while loop:
 
     # DB Load
     if choice == 1:
-        print("Loading the database")
-        while True:
-            fname = input("Enter the file name: ")
-            if os.path.isfile(fname) and fname.split('.')[-1]=='csv':
-                break
-            else:
-                print("File does not exist or wrong format!")
-
-        data = pd.read_csv(fname, delimiter=';')
+        data = load_database()
 
     # DB Save
     elif choice == 2:
         if(data.empty):
             print("No data to save!")
+            time.sleep(2)
         else:
             save_database()
 
@@ -201,3 +215,4 @@ while loop:
         loop = False  # This will make the while loop to end as not value of loop is set to False
     else:
         print("Wrong input!")
+        time.sleep(2)

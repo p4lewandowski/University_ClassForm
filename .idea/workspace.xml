@@ -15,7 +15,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/University_ClassForms$import_export__1_.coverage" NAME="import_export (1) Coverage Results" MODIFIED="1541440787100" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/University_ClassForms$database_manager.coverage" NAME="database_manager Coverage Results" MODIFIED="1542216734647" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/database_file_manager" />
+    <SUITE FILE_PATH="coverage/University_ClassForms$database_manager.coverage" NAME="database_manager Coverage Results" MODIFIED="1542483593373" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/database_file_manager" />
     <SUITE FILE_PATH="coverage/University_ClassForms$import_export.coverage" NAME="import_export Coverage Results" MODIFIED="1541440693688" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/signing" />
   </component>
   <component name="DatabaseView">
@@ -79,33 +79,34 @@
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.closed" value="2" />
-          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="1123" />
-          <entry key="py" value="4167" />
+          <entry key="py" value="4557" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="1123" />
-          <entry key="Python" value="4167" />
+          <entry key="Python" value="4557" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="csv" value="2" />
           <entry key="db_backup" value="2" />
+          <entry key="fuk" value="4" />
           <entry key="html" value="10" />
           <entry key="jpg" value="1" />
-          <entry key="py" value="25" />
+          <entry key="py" value="26" />
           <entry key="sqlite3" value="1" />
         </counts>
       </usages-collector>
@@ -113,8 +114,8 @@
         <counts>
           <entry key="HTML" value="10" />
           <entry key="Image" value="1" />
-          <entry key="PLAIN_TEXT" value="5" />
-          <entry key="Python" value="25" />
+          <entry key="PLAIN_TEXT" value="9" />
+          <entry key="Python" value="26" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -168,13 +169,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/database_file_manager/database_manager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="105" column="33" lean-forward="true" selection-start-line="105" selection-start-column="33" selection-end-line="105" selection-end-column="33" />
-              <folding>
-                <marker date="1542218192746" expanded="true" signature="451:493" ph="..." />
-                <marker date="1542218192746" expanded="true" signature="2141:2143" ph="..." />
-                <marker date="1542218192746" expanded="true" signature="2163:2952" ph="..." />
-              </folding>
+            <state relative-caret-position="266">
+              <caret line="148" column="28" lean-forward="true" selection-start-line="148" selection-start-column="28" selection-end-line="148" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -182,8 +178,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/import_export.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="36" lean-forward="true" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+            <state relative-caret-position="102">
+              <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -227,6 +223,12 @@
       <find>choi</find>
       <find>save</find>
       <find>load</find>
+      <find>add</find>
+      <find>time</find>
+      <find>edit</find>
+      <find>index of re</find>
+      <find>and</find>
+      <find>!</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -253,6 +255,7 @@
         <option value="$PROJECT_DIR$/templates/show_courses.html" />
         <option value="$PROJECT_DIR$/templates/database_import_export.html" />
         <option value="$PROJECT_DIR$/signing/views.py" />
+        <option value="$PROJECT_DIR$/database_file_manager/database_menus.py" />
         <option value="$PROJECT_DIR$/database_file_manager/database_manager.py" />
       </list>
     </option>
@@ -273,7 +276,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -295,6 +297,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -456,16 +459,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="54" y="-8" width="1320" height="784" extended-state="6" />
+    <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12777779" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12899669" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32848233" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49920633" weight="0.35384616" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.32" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49920633" visible="true" weight="0.35343036" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3191268" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32848233" />
@@ -497,11 +500,20 @@
           <url>file://$PROJECT_DIR$/import_export.py</url>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/database_file_manager/database_manager.py</url>
+          <line>148</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
         <watch expression="data.shape[0]" language="Python" />
+        <watch expression="print(data)" language="Python" />
+        <watch expression="data.shape" language="Python" />
+        <watch expression="[data.loc[new_id][x] for x in range(len(list(data.columns.values)))]" language="Python" />
+        <watch expression="[data.loc[new_id][x] != '' for x in range(len(list(data.columns.values)))]" language="Python" />
       </configuration>
       <configuration name="Python.DjangoServer">
         <watch expression="course.students.filter(name=form.data['student_name'],surname=form.data['student_surname'])" language="Python" />
@@ -511,6 +523,26 @@
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>[data.loc[new_id][x] != '' for x in range(len(list(data.columns.values)))]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>[data.loc[new_id][x] for x in range(len(list(data.columns.values)))]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>data.shape</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>print(data)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>data.shape[0]</expression-string>
         <language-id>Python</language-id>
@@ -538,26 +570,6 @@
       </expression>
       <expression>
         <expression-string>form.data</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>student = course.students.filter(name=form.data['student_name'], surname=form.data['student_surname'])</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>obj.object</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>[obj for obj in deserialized]</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>deserialized = serializers.deserialize('json', value)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -608,9 +620,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#ol#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -711,23 +720,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/import_export.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="36" lean-forward="true" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+        <state relative-caret-position="102">
+          <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/database_file_manager/database_menus.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database_file_manager/fuk">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/database_file_manager/database_manager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="105" column="33" lean-forward="true" selection-start-line="105" selection-start-column="33" selection-end-line="105" selection-end-column="33" />
-          <folding>
-            <marker date="1542218192746" expanded="true" signature="451:493" ph="..." />
-            <marker date="1542218192746" expanded="true" signature="2141:2143" ph="..." />
-            <marker date="1542218192746" expanded="true" signature="2163:2952" ph="..." />
-          </folding>
+        <state relative-caret-position="266">
+          <caret line="148" column="28" lean-forward="true" selection-start-line="148" selection-start-column="28" selection-end-line="148" selection-end-column="28" />
         </state>
       </provider>
     </entry>
