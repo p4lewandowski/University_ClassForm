@@ -1,7 +1,8 @@
 import pandas as pd
 pd.options.display.max_rows = 20
 import os.path
-
+import os
+clear = lambda: os.system('cls')
 data = pd.DataFrame()
 
 def print_menu():       ## Your menu design here
@@ -11,19 +12,114 @@ def print_menu():       ## Your menu design here
     print("3 - Edit database")
     print("4 - Show database contents")
     print("5 - Exit")
-    print(67 * "-")
+    print(67 * "-"); print()
+
+def print_data():
+    print()
+    print(data)
+    print()
 
 def print_sub_menu():
     print("1 - Remove record from database")
     print("2 - Edit record in database")
     print("3 - Add new record to database")
-    print("4 - Exit submenu")
+    print("4 - Exit submenu"); print()
+
+def print_record(id):
+    print("Choose number corresponding to column to edit it: ")
+    print(data.loc[[id]])
+    cols = list(data.columns.values)
+    for i, name in enumerate(cols):
+        print(i, name)
+    print(str(len(list(data.columns.values)))+" Exit record-edit submenu")
+
+def print_save_menu():
+    print("Saving file - choose option")
+    print("1 - comma format")
+    print("2 - dot format")
+    print("3 - exit save submenu")
+
+def save_database():
+    loop_save = True
+    while loop_save:
+
+        print_save_menu()
+
+        try:
+            choice = int(input("Enter your choice [1-3]: "))
+        except ValueError:
+            choice = -1
+
+        clear()
+
+        if choice==1:
+            fname=input("Enter filename: ")
+            data.to_csv(fname, sep=',', index=False)
+            print("Saved.")
+
+
+        elif choice ==2:
+            fname=input("Enter filename: ")
+            data.to_csv(fname, sep=';', index=False)
+            print("Saved.")
+
+        elif choice ==3:
+            loop_save = False
+            clear()
+            print("Exit")
+
+        else:
+            print("Wrong option chosen!")
+
+def load_database():
+    print("Loading the database")
+    while True:
+        fname = input("Enter the file name: ")
+        if os.path.isfile(fname) and fname.split('.')[-1] == 'csv':
+            break
+        else:
+            print("File does not exist or wrong format!")
+
+    data = pd.read_csv(fname, delimiter=';')
+
+def edit_record(id):
+    loop_edit_record = True
+    col_list = list(data.columns.values)
+    while loop_edit_record:
+        print_record(id)
+        try:
+            choice = int(input("Enter your choice [0-{}]: ".format(len(col_list) + 1)))
+        except ValueError:
+            choice = -1
+        clear()
+
+        if choice == len(col_list):
+            print("Going back to submenu edit.")
+            loop_edit_record = False
+
+        elif choice < len(col_list) and choice >= 0:
+            added = True
+            while added:
+                data.loc[id,col_list[choice]] = input("Enter the data to place in cell: ")
+                if data.loc[id,col_list[0]] != '':
+                    added=False
+            print("Person added")
+
+
+        else:
+            print("Incorrect column index!")
+
 
 def edit_menu():
-    print_sub_menu()
     loop_edit = True
     while loop_edit:
-        choice = int(input("Enter your choice [1-4]: "))
+        print_data()
+        print_sub_menu()
+        print()
+        try:
+            choice = int(input("Enter your choice [1-4]: "))
+        except ValueError:
+            choice = -1
 
         if choice == 1:
             try:
@@ -34,23 +130,41 @@ def edit_menu():
             except ValueError and KeyError:
                 print("Not a number or out of range!")
 
-
         elif choice == 2:
-            None
+            try:
+                id = input("Enter the index of record to be edited: ")
+                id = int(id)
+                if len(data.index)-1 >= id:
+                    edit_record(id)
+                else:
+                    print("Index out of range!")
+
+            except ValueError and KeyError:
+                print("Not a number!")
 
         elif choice == 3:
-            None
+            print("Adding new record.")
+            new_id = data.shape[0]
+            data.loc[new_id] = \
+                [input(list(data.columns.values+": ")[n]) for n in range(len(list(data.columns.values)))]
+
 
         elif choice == 4:
             print("Going to main menu.")
             loop_edit = False  # This will make the while loop to end as not value of loop is set to False
         else:
             print("Wrong input!")
+        clear()
 
 loop = True
-while loop:  ## While loop which will keep going until loop = False
-    print_menu()  ## Displays menu
-    choice = int(input("Enter your choice [1-5]: "))
+while loop:
+    print_menu()
+    try:
+        choice = int(input("Enter your choice [1-5]: "))
+    except ValueError:
+        choice = -1
+    clear()
+
 
     # DB Load
     if choice == 1:
@@ -69,8 +183,7 @@ while loop:  ## While loop which will keep going until loop = False
         if(data.empty):
             print("No data to save!")
         else:
-            fname = input("Saving the database.\nEnter the file name: ")
-            data.to_csv(fname+".csv", sep=';')
+            save_database()
 
     # DB Edit
     elif choice == 3:
@@ -80,7 +193,7 @@ while loop:  ## While loop which will keep going until loop = False
     # DB Show
     elif choice == 4:
         print("Showing database contents:")
-        print(data)
+        print_data()
 
     # DB exit
     elif choice == 5:
